@@ -1,0 +1,32 @@
+{"properties": [
+  {
+    "name": "Welcome.message",
+    "type": "java.lang.String",
+    "description": "A description for 'Welcome.message'"
+  },
+  {
+    "name": "Greet.message",
+    "type": "java.lang.String",
+    "description": "A description for 'Greet.message'"
+  },
+  {
+    "name": "Wish.message",
+    "type": "java.lang.String",
+    "description": "A description for 'Wish.message'"
+  },
+  {
+    "name": "babu.welcome",
+    "type": "java.lang.String",
+    "description": "A description for 'babu.welcome'"
+  },
+  {
+    "name": "babu.greet",
+    "type": "java.lang.String",
+    "description": "A description for 'babu.greet'"
+  },
+  {
+    "name": "babu.wish",
+    "type": "java.lang.String",
+    "description": "A description for 'babu.wish'"
+  }
+]}

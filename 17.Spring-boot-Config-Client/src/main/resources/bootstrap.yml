@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: applicationPerpertiesFile
+    
+  cloud:
+    config:
+      uri:
+      - http://localhost:6666/

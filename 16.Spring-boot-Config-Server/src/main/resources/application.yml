@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: 16.Spring-boot-Config-Server
+    
+    
+  cloud:
+    config:
+      server:
+        git:
+          clone-on-start: true
+          uri: https://github.com/babududekula/Configuration_properties
+          
+          
+server:
+  port: 6666                          

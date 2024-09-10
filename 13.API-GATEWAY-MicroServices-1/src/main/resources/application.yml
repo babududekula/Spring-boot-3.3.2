@@ -1,0 +1,52 @@
+server:
+  port: 1234
+  
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  tracing:
+    sampling:
+      probability: 1
+
+spring:
+  application:
+    name: API-GATEWAY
+  boot:
+    admin:
+      client:
+        url: http://localhost:2222/
+  cloud:
+    compatibility-verifier:
+      enabled: false
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+      - id: Rest-Api-1
+        predicates:
+        - Path=/welcome/**
+        uri: http://localhost:4444/
+        filters:
+        - name: CircuitBreaker
+          args:
+            name: Rest-Api-1
+            fallbackuri: forward:/firstRestApi   
+      - id: Rest-Api-2
+        predicates:
+        - Path=/wish/**
+        uri: http://localhost:5555/
+        filters:
+        - name: CircuitBreaker
+          args:
+            name: Rest-Api-02
+            fallbackuri: forward:/fallbackLogicForApi2
+  main:
+    web-application-type: reactive
+  zipkin:
+    base-url: http://localhost:9411/
+  
+  

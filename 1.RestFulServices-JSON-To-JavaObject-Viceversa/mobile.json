@@ -1,0 +1,10 @@
+{
+	"name": "Iphone",
+	"address": "Hyd",
+	"cost": 25000,
+	"add": {
+		"add1": "VGR",
+		"add2": "ONG",
+		"add3": "NLR"
+	}
+}
